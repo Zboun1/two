@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.pbody{
+				position: relative;
+				background: url(img/phone.jpg);
+				width: 285px;
+				height: 591px;
+				margin: 20px auto;
+				
+			}
+			#inputBox{
+				position: absolute;
+				top: 465px;
+				left: 24px;
+				background: lightcyan;
+				height: 40px;
+				width: 237px;
+			}
+			#picture{
+				float: left;
+				margin-top: 6px;
+				border: 0;
+				width: 28px;
+				height: 28px;
+			}
+			#text{
+				width: 150px;
+				height: 28px;
+				margin-top: 3px;
+			}
+			#inputText{
+				width: 40px;
+				font-size: 12px;
+				border: 0;
+				background: lightcyan;
+			}
+			#textBox{
+				position: absolute;
+				top: -380px;
+				width: 238px;
+				height: 380px;
+			}
+			#textBox p{
+				height: 40px;
+				margin: 0;
+				width: 238px;
+				margin-top: 10px;
+			}
+			.one span{
+				display: inline-block;
+				border-radius: 10px;
+				background: greenyellow;
+				height: 40px;
+				line-height: 40px;
+				padding: 0 5px;
+			}
+			.two{
+				text-align: right;
+			}
+			.two span{
+				display: inline-block;
+				background: lightskyblue;
+				height: 40px;
+				line-height: 40px;
+				border-radius: 10px;
+				padding: 0 5px;
+			}
+			.two img{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="pbody">
+			<div id="inputBox">
+				<img id="picture" src="img/2.png"></img>
+				<input type="text"  id="text"  />
+				<button id="inputText">
+					发送
+				</button>
+				<div id="textBox">
+					
+				</div>
+			</div>
+		</div>
+		
+		
+		<script type="text/javascript">
+			
+			var picture = document.getElementById("picture");
+			var text = document.getElementById("text");
+			var inputText = document.getElementById("inputText");
+			var textBox = document.getElementById("textBox");
+			
+			var num = true;
+			var news = ""
+			picture.onclick = function(){
+				if(num == true){
+					picture.src = "img/1.png"
+					num =false
+				}else{
+					picture.src = "img/2.png"
+					num = true;
+				}
+				
+			}
+			inputText.onclick = function(){
+				news = text.value
+				if(num == true){
+			 		textBox.innerHTML += "<p class='one'><img  src='img/2.png'>" + "<span>" + news + "</span>" + "</p>"
+			 	}else{
+			 		textBox.innerHTML += "<p class='two'><img  src='img/1.png'>" + "<span>" + news + "</span>" + "</p>"
+			 	}
+			 	text.value = ""
+			}
+			
+			
+			
+			
+		</script>
+	</body>
+</html>
