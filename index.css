@@ -1,0 +1,182 @@
+body{
+	background: rgb(245, 245, 245);
+}
+.header{
+	background: white;
+	margin: 0 auto;
+	width: 800px;
+	height: 160px;
+}
+textarea{
+	resize: none;
+	background:rgba(128, 128, 128, 0.2);
+	width: 750px;
+	height: 50px;
+	margin: 16px ;
+	padding: 10px;
+	border: 1px;
+	border-radius: 10px;
+	outline-color:orange ;
+	outline-width: 1px;
+}
+.header-foot{
+	line-height: 40px;
+	margin: 0px auto;
+	width: 750px;
+	height: 40px;
+}
+.header-foot > span{
+	cursor: default;
+	display: inline-block;
+	border-radius: 50px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+}
+.header-foot > span:hover{
+	background: tomato;
+}
+
+.header-foot-right{
+	float: right;
+}
+.header-foot-right span{
+	margin-right: 10px;
+}
+.header-foot-right button{
+	border: 0;
+	cursor: not-allowed;
+	border-radius: 25px;
+	background:  #FFC180;
+	color: #fff;;
+	width: 65px;
+	height: 33px;
+}
+.cbody{
+	background: white;
+	margin: 10px auto;
+	width: 800px;
+	min-height: 80px;
+	position: relative;
+}
+.cbody > div{
+	display: inline-block;
+	
+}
+.cbody-left{
+	min-height: 80px;
+	width: 80px;
+	margin-top: 20px;
+}
+.cbody-left img{
+	position: absolute;
+	top: 20px;
+	left: 10px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-left: 20px;
+	
+}
+
+.cbody-right{
+	width: 600px;
+	margin-top: 20px;
+	padding-right: 20px;
+}
+
+.cbody-right-top h3{
+	width: 120px;
+	margin: 0;
+	font-weight: 400;
+}
+.cbody-right-top h3:hover,
+.cbody-right-top p span:hover{
+	color: orange;
+}
+.cbody-right-top p{
+	margin-top: 5px;
+	font-size: 14px;
+	color:  #939393;
+}
+.cbody-right-bottom {
+	line-height: 24px;
+	padding-bottom: 20px;
+}
+.cbody-nav li{
+	list-style: none;
+}
+
+.cbody-nav > div{
+	position: absolute;
+	top: 40px;
+	right: 30px;
+	border-radius: 50%;
+	line-height: 30px;
+	text-align: center;
+	width: 30px;
+	height: 30px;
+}
+.cbody-nav > div:hover{
+	background:  rgb(255,130,0,0.2);
+}
+.cbody-nav ul{
+	position: absolute;
+	z-index: 10;
+	top: 50px;
+	right: 20px;
+	display: none;
+}
+.cbody-nav ul li{
+	height: 40px;
+	background: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 40px;
+}
+.cbody-nav:hover ul{
+	display: block;
+} 
+.cbody-nav ul li:hover{
+	background: rgb(245, 245, 245);
+}
+.popup-editor,
+.popup-delete{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	display: none;
+}
+.editor-content,
+.delete-content{
+	position: absolute;
+	padding: 2rem;
+	top: 30%;
+	left: calc(50% - 250px);
+	min-width: 500px;
+	background: white;
+}
+.editor-content textarea{
+	width: 90%;
+	height: 150px;
+	resize: none;
+}
+.popup-delete button,
+.popup-editor button{
+	width: 80px;
+	height: 30px;
+	border: 0;
+	border-radius: 20px;
+	background: rgba(128, 128, 128, 0.2);
+	margin-right: 40px;
+	margin-left: 40px;
+}
+.popup-delete button:hover,
+.popup-editor button:hover{
+	background: orange;
+	color: white;
+}
